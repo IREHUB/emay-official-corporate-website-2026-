@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emaycom Global Holdings | Defined by Excellence</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --navy: #1a2a44;
+            --gold: #c5a059;
+            --white: #ffffff;
+            --tech-blue: #00f2ff;
+            --light-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        header {
+            background: var(--navy);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: 0.3s;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(26, 42, 68, 0.85), rgba(26, 42, 68, 0.85)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        .motto-tagline {
+            color: var(--gold);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            font-weight: 300;
+            display: block;
+        }
+
+        .hero-btn {
+            margin-top: 40px;
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 16px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-btn:hover {
+            background: #b38f4d;
+            transform: translateY(-3px);
+        }
+
+        /* Pillars Section */
+        .pillars-section {
+            padding: 100px 10%;
+            background: var(--light-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: #777;
+            font-size: 1.1rem;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            border-bottom: 4px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .pillar-card h3 {
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .pillar-card p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .pillar-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* Unique Border Accents per Division */
+        .card-it { border-top: 6px solid var(--tech-blue); }
+        .card-edu { border-top: 6px solid var(--gold); }
+        .card-re { border-top: 6px solid var(--navy); }
+        .card-auto { border-top: 6px solid #444; }
+
+        /* Footer */
+        footer {
+            background: #0a0e14;
+            color: #888;
+            padding: 80px 10% 40px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            color: var(--gold);
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .footer-motto {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .copyright {
+            border-top: 1px solid #222;
+            padding-top: 30px;
+            font-size: 0.75rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            header { flex-direction: column; }
+            nav { margin-top: 20px; }
+            nav a { margin: 5px 10px; font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+   <header>
+    <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+        <img src="Logo (2).png" alt="Emaycom Logo" style="height: 100px; width: 100px; display: gold;">
+        
+        <div style="display: flex; flex-direction: column; border-left: 1px solid rgba(211, 203, 188, 0.5); padding-left: 15px;">
+            <span style="font-size: 1.7rem; font-weight: bold; color: var(--gold); letter-spacing: 1px; line-height: 1;">EMAYCOM GLOBAL</span>
+            <span style="font-size: 0.90rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px; opacity: 0.9;">
+                Defined by Excellence, Driven by Innovation
+            </span>
+        </div>
+    </a>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tech.html">IT Firm</a>
+        <a href="education.html">Education</a>
+        <a href="realestate.html">Real Estate</a>
+        <a href="automobiles.html">Cars</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+    <section class="hero">
+        <div>
+            <h1>EMAYCOM GLOBAL</h1>
+            <span class="motto-tagline">Defined by Excellence, Driven by Innovation</span>
+            <div class="hero-actions">
+                <a href="about.html" class="hero-btn">Explore Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pillars-section">
+        <div class="section-header">
+            <h2>Our Business Pillars</h2>
+            <p>A multi-sector conglomerate engineered for global impact.</p>
+        </div>
+
+        <div class="pillars-grid">
+            <div class="pillar-card card-it">
+                <div>
+                    <span style="font-size: 40px;">💠</span>
+                    <h3>EMAYCOM IT FIRM</h3>
+                    <p>Building next-generation software, secure enterprise infrastructure, and professional hardware procurement for global businesses.</p>
+                </div>
+                <a href="tech.html" class="pillar-link">System Engineering →</a>
+            </div>
+
+            <div class="pillar-card card-edu">
+                <div>
+                    <span style="font-size: 40px;">🎓</span>
+                    <h3>Education Consult</h3>
+                    <p>International student placements and specialized visa advisory for elite universities across the UK, USA, Canada, and Europe.</p>
+                </div>
+                <a href="education.html" class="pillar-link">Start Application →</a>
+            </div>
+
+            <div class="pillar-card card-re">
+                <div>
+                    <span style="font-size: 40px;">🏢</span>
+                    <h3>Real Estate</h3>
+                    <p>A curated portfolio of high-yield commercial and residential properties in the world's most sought-after prime locations.</p>
+                </div>
+                <a href="realestate.html" class="pillar-link">View Portfolio →</a>
+            </div>
+
+            <div class="pillar-card card-auto">
+                <div>
+                    <span style="font-size: 40px;">🏎️</span>
+                    <h3>Automobiles</h3>
+                    <p>Global sourcing and direct importation of luxury vehicles and specialized armored security units for corporate fleets.</p>
+                </div>
+                <a href="automobiles.html" class="pillar-link">Order Vehicle →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span class="footer-logo">EMAYCOM GLOBAL HOLDINGS</span>
+        <span class="footer-motto">Defined by Excellence, Driven by Innovation</span>
+        
+        <div class="copyright">
+            &copy; 2026 Emaycom Global Holdings. All Rights Reserved.
+            <br>
+            <small>Integrated Global Solutions across Tech, Real Estate, Education, and Mobility.</small>
+        </div>
+    </footer>
+    <a href="https://wa.me/2348135225405" 
+   style="position:fixed; width:60px; height:60px; bottom:40px; right:40px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow: 2px 2px 3px #999; z-index:1001;" 
+   target="_blank">
+   <span style="line-height:60px;">💬</span>
+</a>
+</body>
+</html>
